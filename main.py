@@ -25,6 +25,7 @@ def main():
         print("python main.py -f <filename> -d")
         print("---------------------------------------------------")
     elif sys.argv[3] == "-e" and len(sys.argv) == 8:
+        print("Encryption")
         fpath = sys.argv[2]
         if os.path.isfile(fpath):
             print("file found")
@@ -33,6 +34,12 @@ def main():
             print("For Help:",sys.argv[0],"-h")
     elif sys.argv[3] == "-d" and len(sys.argv) == 4:
         print("Decryption")
+        fpath = sys.argv[2]
+        if os.path.isfile(fpath):
+            print("file found")
+        else:
+            print("File not found \n")
+            print("For Help:",sys.argv[0],"-h")
     else:
         print("For Help:",sys.argv[0],"-h")
 main()
