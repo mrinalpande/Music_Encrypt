@@ -46,8 +46,8 @@
     The Music Encrypt follows a scheme where root note as the key. The Encryptions occurs using 
     a scheme based on the key note.
 
-    First Seven notes in a octave are used removing the higher part of the. The Root note is the 
-    key following which the whole file is encrypted with. This part is the column identification 
+    First Seven notes in a octave are used for encryption. The Root note is the 
+    key using which the whole file is encrypted. This part is the column identification 
     which helps to identidfy the column. 
 
     The rows are identified by the different type of note duration. The 5 duration that are used 
@@ -92,3 +92,11 @@ Combining the Column and Row we get the Encrypted Music File. Therefore the abov
         Notes       A   E   E   E   A
         Duration   HN  WN  HN  HN  QN
         -------------------------------
+
+
+## Usage
+    Encryption:
+    python main.py -f <filename> -e -k <key> -o <output filename>
+
+    Decryption:
+    python main.py -f<filename> -d
