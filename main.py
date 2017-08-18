@@ -2,6 +2,7 @@
 ### Date:   Aug,15 2017
 import sys
 import os.path
+import encrypt
 
 def main():
     print("---------------------------------------------------")
@@ -25,10 +26,12 @@ def main():
         print("python main.py -f <filename> -d")
         print("---------------------------------------------------")
     elif sys.argv[3] == "-e" and len(sys.argv) == 8:
-        print("Encryption")
         fpath = sys.argv[2]
+        key = sys.argv[5]
+        outfile = sys.argv[7]
+        print("Starting Encryption...")
         if os.path.isfile(fpath):
-            print("file found")
+            encrypt.encrypt(fpath,key,outfile)
         else:
             print("File not found \n")
             print("For Help:",sys.argv[0],"-h")
