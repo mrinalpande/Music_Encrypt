@@ -1,3 +1,5 @@
+import generate
+
 def encrypt(path,key,outfile):
     print("\n-------Encrypting-------")
     plain_text = open(str(path),"r")
@@ -8,8 +10,8 @@ def encrypt(path,key,outfile):
     enc = open("./encode/"+key+"_en","r")
     for notes in scale:
         note = notes
-    print("Plain Text: "+pt)
-    print("Notes on scale: "+note)
     en = []
     for lines in enc:
         en.append(lines.rstrip('\n'))
+    print(note)
+    generate.generate(note,outfile)

@@ -10,7 +10,7 @@ def main():
     print("Author: Mrinal Pande")
     print("---------------------------------------------------")
     if  len(sys.argv) < 2:
-        print("For Help:",sys.argv[0],"-h")
+        print("Invalid input \nFor Help:",sys.argv[0],"-h")
     elif sys.argv[1] == "-h":
         print("Help For Music Encrypt")
         print("---------------------------------------------------")
@@ -34,7 +34,7 @@ def main():
             encrypt.encrypt(fpath,key,outfile)
         else:
             print("File not found \n")
-            print("For Help:",sys.argv[0],"-h")
+            print("Invalid input\nFor Help:",sys.argv[0],"-h")
     elif sys.argv[3] == "-d" and len(sys.argv) == 4:
         print("Decryption")
         fpath = sys.argv[2]
@@ -42,7 +42,7 @@ def main():
             print("file found")
         else:
             print("File not found \n")
-            print("For Help:",sys.argv[0],"-h")
+            print("Invalid Input\nFor Help:",sys.argv[0],"-h")
     else:
-        print("For Help:",sys.argv[0],"-h")
+        print("Invalid input\nFor Help:",sys.argv[0],"-h")
 main()
