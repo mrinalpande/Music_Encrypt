@@ -6,7 +6,7 @@ def encrypt(path,key,outfile):
     scale = open("./scales/"+key,"r")
     encoding = open("./encode/"+key+"_en","r")
     duration = open("./encode/duration","r")
-
+    cipher_text = open("c_text","w")
     #Getting plain text
     for lines in plain_text:
         pt = lines.upper()
@@ -26,22 +26,15 @@ def encrypt(path,key,outfile):
     for dura in duration:
         dur.append(dura.rstrip('\n'))
 
-    #Checking
-    # print(note[2])
-    # print(en)
-    # print(dur[4])
-
-    i=0
-    while i < len(pt):
-        print(en[0])
-        if pt[i] in en[0][1]:
-            print(pt[i])
-            print(en.index(pt[i]))
-        i = i+1
+    #searching for note in the enc
+    for let in pt:
+        for letters in en:
+            cipher_text.write(str(letters.find(let)).rstrip('-1'))
+            for letter in letters:
+                if letter == let:
+                    cipher_text.write(","+dur[en.index(letters)]+"\n")
+                    break
+                else:
+                    continue
 
     #generate.generate(note,dur,outfile)
-    #check encoding
-    # for word in pt:
-    #     if word in en:
-    #         ind = en.index(word)
-    #         print(ind)
