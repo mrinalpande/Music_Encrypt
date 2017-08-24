@@ -1,6 +1,9 @@
 import generate
+import time
 
 def encrypt(path,key,outfile):
+    #timing the loops
+    program_starts = time.time()
     print("\n-------Encrypting-------")
     plain_text = open(str(path),"r")
     scale = open("./scales/"+key,"r")
@@ -36,5 +39,7 @@ def encrypt(path,key,outfile):
                     break
                 else:
                     continue
-
+    now = time.time()
+    taken = now - program_starts
+    print("Time taken",taken)
     #generate.generate(note,dur,outfile)
