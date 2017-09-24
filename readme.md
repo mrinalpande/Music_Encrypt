@@ -9,6 +9,9 @@
     encrypt text based files and converts them to musical notes. Theses musical notes are then taken 
     and converted to midi based music files, so they look like normal music files.
 
+    Dependencies: 
+    pyknon: https://github.com/kroger/pyknon
+
 ## Theory
 
 ### Musical Notes and Duration
@@ -62,8 +65,7 @@
     substituted note: A   B   C#   D   E   F#   G#    rest
                       H   I   J    K   L   M    N
                       O   P   Q    R   S   T    U
-                      V   W   X    Y   Z   0    1
-                      2   3   4    5   6   7    8     9
+                      V   W   X    Y   Z
 
     Ignoring the # sign as we can read the above scheme as a simple A-Z,0-9. For every letter in 
     the 26 alphabet and digit there is a substitute note represented in the top line.
