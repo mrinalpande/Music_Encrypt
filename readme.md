@@ -79,8 +79,7 @@
     Whole note:     A   B   C#   D   E   F#   G#    rest
     Half note:      H   I   J    K   L   M    N
     Quater note:    O   P   Q    R   S   T    U
-    Eighth note:    V   W   X    Y   Z   0    1
-    Sixteenth note: 2   3   4    5   6   7    8     9
+    Eighth note:    V   W   X    Y   Z
 
     So HELLO -> HN WN HN HN QN
     HN: Half Note
