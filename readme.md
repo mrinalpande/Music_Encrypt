@@ -9,8 +9,9 @@
     encrypt text based files and converts them to musical notes. Theses musical notes are then taken 
     and converted to midi based music files, so they look like normal music files.
 
-    Dependencies: 
-    pyknon: https://github.com/kroger/pyknon
+## Dependencies: 
+    Pyknon: https://github.com/kroger/pyknon
+    Mido: https://github.com/olemb/mido/tree/stable
 
 ## Theory
 
@@ -62,21 +63,21 @@
 
     A major Scale as an Example:
                      key
-    substituted note: A   B   C#   D   E   F#   G#    rest
+    substituted note: C   D   E    F   G   A    B
                       H   I   J    K   L   M    N
                       O   P   Q    R   S   T    U
                       V   W   X    Y   Z
 
     Ignoring the # sign as we can read the above scheme as a simple A-Z,0-9. For every letter in 
     the 26 alphabet and digit there is a substitute note represented in the top line.
-        HELLO -> AEEEA
+        HELLO -> CEGGC
 
 ### Row Identification
     Taking the same A major scale example
 
     A major Scale as an Example:
                    key
-    Whole note:     A   B   C#   D   E   F#   G#    rest
+    Whole note:     C   D   E    F   G   A    B
     Half note:      H   I   J    K   L   M    N
     Quater note:    O   P   Q    R   S   T    U
     Eighth note:    V   W   X    Y   Z
@@ -90,7 +91,7 @@ Combining the Column and Row we get the Encrypted Music File. Therefore the abov
 
         -------------------------------
                     H   E   L   L   O
-        Notes       A   E   E   E   A
+        Notes       C   E   G   G   C
         Duration   HN  WN  HN  HN  QN
         -------------------------------
 
