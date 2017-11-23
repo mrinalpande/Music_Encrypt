@@ -61,7 +61,7 @@
 
 ### Column Identification
 
-    A major Scale as an Example:
+    C major Scale as an Example:
                      key
     substituted note: C   D   E    F   G   A    B
                       H   I   J    K   L   M    N
@@ -73,7 +73,7 @@
         HELLO -> CEGGC
 
 ### Row Identification
-    Taking the same A major scale example
+    Taking the same C major scale example
 
     A major Scale as an Example:
                    key
