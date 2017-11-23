@@ -3,6 +3,7 @@
 import sys
 import os.path
 import encrypt
+import decrypt
 
 def main():
     print("---------------------------------------------------")
@@ -23,7 +24,7 @@ def main():
         print("\nFor encrypting a file:")
         print("python main.py -f <filename> -e -k <key> -o <output file name>")
         print("\nFor decrypting a file:")
-        print("python main.py -f <filename> -d")
+        print("python main.py -f <filename> -d -k <key>")
         print("---------------------------------------------------")
     elif sys.argv[3] == "-e" and len(sys.argv) == 8:
         fpath = sys.argv[2]
@@ -35,14 +36,16 @@ def main():
         else:
             print("File not found \n")
             print("Invalid input\nFor Help:",sys.argv[0],"-h")
-    elif sys.argv[3] == "-d" and len(sys.argv) == 4:
+    elif sys.argv[3] == "-d" and len(sys.argv) == 6:
         print("Decryption")
         fpath = sys.argv[2]
+        key = sys.argv[5]
+        print("Starting decryption...")
         if os.path.isfile(fpath):
-            print("file found")
+            decrypt.decrypt(fpath,key)
         else:
             print("File not found \n")
-            print("Invalid Input\nFor Help:",sys.argv[0],"-h")
+            print("Invalid input\nFor Help:",sys.argv[0],"-h")
     else:
         print("Invalid input\nFor Help:",sys.argv[0],"-h")
 main()

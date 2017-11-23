@@ -2,13 +2,9 @@ import generate
 # import time
 
 def encrypt(path,key,outfile):
-    #timing the loops
-    # program_starts = time.time()
-
     print("\n-------Encrypting-------")
     plain_text = open(str(path),"r")
-    # scale = open("./scales/"+key,"r")
-    encoding = open("./encode/"+key+"_en","r")
+    encoding = open("./encode/"+"C_en","r")
     duration = open("./encode/duration","r")
     cipher_text = open("c_text","w")
     cipher_dur = open("c_dur","w")
@@ -17,11 +13,6 @@ def encrypt(path,key,outfile):
     for lines in plain_text:
         pt = lines.upper()
     plain_text.close()
-
-    #Creating list for the notes based on the key
-    # note = []
-    # for notes in scale:
-    #     note.append(notes.rstrip('\n'))
 
     #Creating list for the encoding
     en = []
@@ -38,16 +29,22 @@ def encrypt(path,key,outfile):
         for lines in en:
             for let in lines:
                 if let == letter:
-                    cipher_text.write(str(lines.index(let)))
+                    if lines.index(let) == 0:
+                        cipher_text.write(str(lines.index(let))+"\n")
+                    elif lines.index(let) == 1:
+                        cipher_text.write(str(lines.index(let)+1)+"\n")
+                    elif lines.index(let) == 2 or lines.index(let) == 3:
+                        cipher_text.write(str(lines.index(let)+2)+"\n")
+                    elif lines.index(let) == 4:
+                        cipher_text.write(str(lines.index(let)+3)+"\n")
+                    elif lines.index(let) == 5:
+                        cipher_text.write(str(lines.index(let)+4)+"\n")
+                    elif lines.index(let) == 6:
+                        cipher_text.write(str(lines.index(let)+5)+"\n")
                     cipher_dur.write(str(dur[en.index(lines)])+"\n")
 
     cipher_text.close()
     cipher_dur.close()
     duration.close()
     encoding.close()
-
-    # now = time.time()
-    # taken = now - program_starts
-    # print("Time taken",taken)
-
     generate.generate(key,outfile)
