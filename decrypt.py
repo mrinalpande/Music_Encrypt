@@ -1,7 +1,7 @@
 import mido
 from mido import MidiFile
 import note_find as find_note
-
+import os
 
 def decrypt(path,key):
     note_dur = open("parts","w")
