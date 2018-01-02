@@ -1,5 +1,4 @@
 import generate
-# import time
 
 def encrypt(path,key,outfile):
     print("\n-------Encrypting-------")

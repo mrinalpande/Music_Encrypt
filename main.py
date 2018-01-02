@@ -48,5 +48,4 @@ def main():
             print("Invalid input\nFor Help:",sys.argv[0],"-h")
     else:
         print("Invalid input\nFor Help:",sys.argv[0],"-h")
-    os.remove("parts")
 main()
